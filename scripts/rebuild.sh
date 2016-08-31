@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 set -eu
 
 source arm_universe/activate.sh
