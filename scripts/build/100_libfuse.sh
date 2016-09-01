@@ -8,6 +8,8 @@ mkdir -p prefix
 mkdir -p trash
 cd build/fuse
 
+MOUNT_FUSE_PATH=$ROOT/trash \
+INIT_D_PATH=$ROOT/trash \
 UDEV_RULES_PATH=$ROOT/trash \
 $ROOT/src/fuse/configure \
 	CC=gcc-static \
