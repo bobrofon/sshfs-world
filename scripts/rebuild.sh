@@ -1,7 +1,9 @@
 #! /bin/bash
 set -eu
 
-source arm_universe/activate.sh
+ARCH="${1:-arm}"
+
+source arm_universe/activate.sh "${ARCH}"
 ./scripts/clear.sh
 ./scripts/get.sh
 ./scripts/versions.sh

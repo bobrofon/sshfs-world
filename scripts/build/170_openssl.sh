@@ -12,7 +12,7 @@ cd build/openssl
 ./Configure \
 	no-shared \
 	--prefix=$ROOT/trash \
-	linux-armv4
+	"${OS_COMPILER}"
 
 make
 make install_sw
