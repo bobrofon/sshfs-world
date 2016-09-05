@@ -42,7 +42,8 @@ $ROOT/src/openssh/configure \
 	--without-kerberos5 \
 	--without-md5-passwords \
 	--with-4in6 \
-	--without-bsd-auth
+	--without-bsd-auth \
+	--with-cppflags="-DANDROID"
 
 make ssh
 mkdir -p $ROOT/prefix/bin/
