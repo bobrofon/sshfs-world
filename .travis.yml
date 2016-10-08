@@ -7,10 +7,10 @@ script:
   - cd build-universe && ./build.sh arm && cd -
   - ./scripts/rebuild.sh arm
   - . ./build-universe/activate.sh arm
-  - run ./prefix/bin/ssh -h
-  - run ./prefix/bin/sshfs -h
+  - run ./prefix/bin/ssh -V
+  - run ./prefix/bin/sshfs --version
   - cd build-universe && ./build.sh i686 && cd -
   - ./scripts/rebuild.sh i686
   - . ./build-universe/activate.sh i686
-  - run ./prefix/bin/ssh -h
-  - run ./prefix/bin/sshfs -h
+  - run ./prefix/bin/ssh -V
+  - run ./prefix/bin/sshfs --version
