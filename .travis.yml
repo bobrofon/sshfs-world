@@ -1,0 +1,16 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - ./build-universe/build.sh arm
+  - ./scripts/rebuild.sh arm
+  - . ./build-universe/activate.sh arm
+  - run ./prefix/bin/ssh -h
+  - run ./prefix/bin/sshfs -h
+  - ./build-universe/build.sh i686
+  - ./scripts/rebuild.sh i686
+  - . ./build-universe/activate.sh i686
+  - run ./prefix/bin/ssh -h
+  - run ./prefix/bin/sshfs -h
