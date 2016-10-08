@@ -20,7 +20,8 @@ $ROOT/src/glib/configure \
 	--disable-man \
 	--disable-systemtap \
 	--with-pic \
-	--with-pcre=internal
+	--with-pcre=internal \
+	--disable-libmount
 
 make
 make install
