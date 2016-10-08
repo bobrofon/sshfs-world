@@ -1,3 +1,3 @@
-[submodule "arm_universe"]
-	path = arm_universe
-	url = git://bitbucket.org:/bobrofon/arm_universe.git
+[submodule "build-universe"]
+	path = build-universe
+	url = https://github.com/bobrofon/build-universe.git
