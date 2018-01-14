@@ -1,7 +1,7 @@
-fuse     https://github.com/libfuse/libfuse.git            c2d0e65057aa3b0627ee06711f8a6408accee63c
-glib     https://github.com/GNOME/glib.git                 043208f6142ac12b9cac87728638dbc0f3605d09
-libffi   https://github.com/libffi/libffi.git              60e4250a77eb3fde500bfd68ec40519fe34b21bd
-openssh  https://github.com/bobrofon/openssh-portable.git  c6549e8c629948030460469d02c4d0873ac64b0d
-openssl  https://github.com/openssl/openssl.git            45f4761fdbb7b47a92ee5ed94e5485fb6218f3f5
-sshfs    https://github.com/libfuse/sshfs.git              e5acfce8eda218d34fa5ded13571f904efa70727
-zlib     https://github.com/madler/zlib.git                50893291621658f355bc5b4d450a8d06a563053d
+fuse     https://github.com/libfuse/libfuse.git            a83cd72f641671b71b8268b1765e449cae071f3e
+glib     https://github.com/GNOME/glib.git                 e91c11841808ccca408da96136f433a82b2e2145
+libffi   https://github.com/libffi/libffi.git              c50ba182f43537e29dd92cfd9b2fa7a30549a06e
+openssh  https://github.com/bobrofon/openssh-portable.git  3168b5b445da5ec3404266feaa9cfbcc6dee682a
+openssl  https://github.com/openssl/openssl.git            58cc2962db17183c039bbbd08e31e179c1126c63
+sshfs    https://github.com/libfuse/sshfs.git              f0a0cc2b7e7d837946af7597caf9cc7394f238dc
+zlib     https://github.com/madler/zlib.git                cacf7f1d4e3d44d871b605da3b647f07d718623f

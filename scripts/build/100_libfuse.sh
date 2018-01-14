@@ -2,33 +2,23 @@
 set -eu
 
 ROOT=$PWD
+PREFIX=$ROOT/prefix
 
 mkdir -p build/fuse
 mkdir -p prefix
 mkdir -p trash
 cd build/fuse
 
-MOUNT_FUSE_PATH=$ROOT/trash \
-INIT_D_PATH=$ROOT/trash \
-UDEV_RULES_PATH=$ROOT/trash \
-$ROOT/src/fuse/configure \
-	CC=gcc-static \
-	--prefix=$ROOT/trash \
-	--bindir=$ROOT/prefix/bin \
-	--libdir=$ROOT/prefix/lib \
-	--includedir=$ROOT/prefix/include \
-	--host=$HOST \
-	--disable-shared \
-	--enable-static \
-	--enable-lib \
-	--enable-util \
-	--disable-test \
-	--disable-example \
-	--disable-mtab \
-	--disable-rpath \
-	--with-pic \
-	--without-libiconv-prefix \
-	--enable-largefile
+CC=gcc-static \
+meson \
+	--prefix=$PREFIX \
+	--backend ninja \
+	--buildtype release \
+	--default-library static \
+	-D disable-mtab=true \
+	-D udevrulesdir=$ROOT/src/fuse/util/udev.rules \
+	$ROOT/src/fuse
 
-make
-make install
+ninja
+echo "#! /bin/sh" > $ROOT/src/fuse/util/install_helper.sh
+ninja install
