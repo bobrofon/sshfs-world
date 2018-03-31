@@ -25,7 +25,6 @@ $ROOT/src/openssh/configure \
 	--disable-pututline \
 	--disable-pututxline \
 	--without-openssl \
-	--without-ssh1 \
 	--without-rpath \
 	--without-solaris-contracts \
 	--without-solaris-projects \
