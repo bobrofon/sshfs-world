@@ -4,13 +4,14 @@ services:
   - docker
 
 script:
-  - cd build-universe && ./build.sh arm && cd -
-  - ./scripts/rebuild.sh arm
+  - mkdir -p build
+  - cd build
+  - cmake ..
+  - make
+  - cd -
   - . ./build-universe/activate.sh arm
-  - run ./prefix/bin/ssh -V
-  - run ./prefix/bin/sshfs --version
-  - cd build-universe && ./build.sh i686 && cd -
-  - ./scripts/rebuild.sh i686
+  - run ./stable/arm/ssh -V
+  - run ./stable/arm/sshfs --version
   - . ./build-universe/activate.sh i686
-  - run ./prefix/bin/ssh -V
-  - run ./prefix/bin/sshfs --version
+  - run ./stable/i686/ssh -V
+  - run ./stable/i686/sshfs --version
