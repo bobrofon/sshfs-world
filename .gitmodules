@@ -1,3 +1,26 @@
 [submodule "build-universe"]
 	path = build-universe
 	url = https://github.com/bobrofon/build-universe.git
+[submodule "src/fuse"]
+	path = src/fuse
+	url = https://github.com/libfuse/libfuse.git
+[submodule "src/zlib"]
+	path = src/zlib
+	url = https://github.com/madler/zlib.git
+[submodule "src/openssl"]
+	path = src/openssl
+	url = https://github.com/openssl/openssl.git
+	branch = OpenSSL_1_0_2-stable
+[submodule "src/openssh"]
+	path = src/openssh
+	url = https://github.com/bobrofon/openssh-portable.git
+	branch = passwd
+[submodule "src/libffi"]
+	path = src/libffi
+	url = https://github.com/libffi/libffi.git
+[submodule "src/glib"]
+	path = src/glib
+	url = https://github.com/GNOME/glib.git
+[submodule "src/sshfs"]
+	path = src/sshfs
+	url = https://github.com/libfuse/sshfs.git

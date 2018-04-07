@@ -6,16 +6,14 @@ Build scripts for standalone sshfs with android support.
 * i686
 
 # How to use
-Make build environment
+Build arm and i686 binaries
 ```
-$ cd build-universe
-$ ./build.sh i686
+$ mkdir -p build
+$ cd build
+$ cmake ..
+$ make
 $ cd -
 ```
-Run build script
-```
-$ ./scripts/rebuild.sh i686
-```
-Get result from ./prefix
+Get result from ./stable
 # Dependencies
-* [Autoconf](https://www.gnu.org/software/autoconf/autoconf.html)
+* [CMake](https://cmake.org/)
