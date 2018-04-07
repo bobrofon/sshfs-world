@@ -8,6 +8,7 @@ endif()
 set(TRASH ${CMAKE_CURRENT_BINARY_DIR}/trash)
 
 file(GLOB_RECURSE SRC "${ROOT}/src/libffi/*")
+file(GLOB MAIN_DIR "${ROOT}/src/libffi/*")
 
 add_custom_command(OUTPUT ${PROJECT_NAME}-dir COMMAND mkdir -p ${PROJECT_NAME}-dir)
 
@@ -17,9 +18,11 @@ add_custom_command(
 
 	COMMAND mkdir -p ${PREFIX}
 	COMMAND mkdir -p ${TRASH}
+	COMMAND cp -rf ${MAIN_DIR} .
+	COMMAND ./autogen.sh
 
 	COMMAND
-	${ROOT}/src/libffi/configure
+	./configure
 		CC=gcc-static
 		--prefix=${TRASH}
 		--libdir=${PREFIX}/lib
