@@ -5,6 +5,8 @@ if (NOT DEFINED PREFIX)
 	set(PREFIX ${CMAKE_CURRENT_BINARY_DIR}/prefix)
 endif()
 
+set(CMAKE_C_COMPILER gcc-static)
+
 # TODO rewrite as packages
 add_subdirectory(openssh)
 add_subdirectory(sshfs)
