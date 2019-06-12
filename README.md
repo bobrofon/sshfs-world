@@ -4,9 +4,10 @@ Build scripts for standalone sshfs with android support.
 # Supported architectures
 * arm
 * i686
+* aarch64
+* x86_64
 
 # How to use
-Build arm and i686 binaries
 ```
 $ mkdir -p build
 $ cd build
